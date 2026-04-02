@@ -1,0 +1,80 @@
+### ekf config file ###
+
+ekf_filter_node:
+  ros__parameters:
+
+  # The frequency, in Hz, at which the filter will output a position estimate.
+  # Note that the filter will not begin computation until it receives at least
+  # one message from one of the inputs. It will then run continuously at the
+  # frequency specified here, regardless of whether it receives more measurements.
+  # Defaults to 30 if unspecified.
+    frequency: 15.0
+
+  # The period, in seconds, after which we consider a sensor to have timed out.
+    sensor_timeout: 0.1
+
+  # If set to true, no 3D information will be used in your state estimate.
+  # Use this if you are operating in a planar environment.
+    two_d_mode: true
+
+  # Whether to broadcast the transformation over the /tf topic.
+    publish_tf: true
+
+  # REP-105 specifies coordinate frames: base_link, odom, map
+  # base_link is attached to the robot
+  # odom is continuous but drifts
+  # map is globally accurate but may jump
+
+  # 1. Set frames appropriately
+  # 2. If using continuous data (odom, imu), set world_frame = odom
+  # 3. If using global data (GPS), set world_frame = map
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+
+  # The filter accepts multiple inputs:
+  # nav_msgs/Odometry, geometry_msgs/PoseWithCovarianceStamped,
+  # geometry_msgs/TwistWithCovarianceStamped, sensor_msgs/Imu
+
+  # Add inputs like odom0, imu0, imu1 etc.
+
+  # =========================
+  # ODOMETRY INPUT
+  # =========================
+
+    odom0: /odom
+
+  # Values represent:
+  # [x, y, z,
+  #  roll, pitch, yaw,
+  #  vx, vy, vz,
+  #  vroll, vpitch, vyaw,
+  #  ax, ay, az]
+
+    odom0_config: [
+      false, false, false,
+      false, false, false,
+      true,  true,  false,
+      false, false, true,
+      false, false, false
+    ]
+
+    odom0_queue_size: 10
+    odom0_differential: false
+    odom0_relative: false
+
+  # =========================
+  # IMU INPUT
+  # =========================
+
+    imu0: imu/data
+
+    imu0_config: [
+      false, false, false,
+      false, false, false,
+      false , false ,  false,
+      false, false, true,
+      true , true , false
+    ]
