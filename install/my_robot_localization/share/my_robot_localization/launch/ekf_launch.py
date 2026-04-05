@@ -30,14 +30,9 @@ def generate_launch_description():
         Node(
             package='tf2_ros',
             executable='static_transform_publisher',
-            arguments=['0','0','0','0','0','3.14159','base_link','imu_link']
-        ),
-
-        Node(
-        package='rviz2',
-        executable='rviz2',
-        name='rviz2',
-        output='screen'
+            name='imu_static_tf',
+            output='screen',
+            arguments=['0', '0', '0', '0', '0', '3.14159', 'base_link', 'imu_link']
         ),
 
         Node(
@@ -49,3 +44,4 @@ def generate_launch_description():
         )   
 
     ])
+
