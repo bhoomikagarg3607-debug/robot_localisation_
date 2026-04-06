@@ -6,7 +6,7 @@ I have used wheel odometry and IMU data and fused them using the Extended Kalman
 
 
 
-## 📌 What this project does
+##  What this project does
 
 - Takes input from:
   - `/odom` (wheel odometry)
@@ -19,7 +19,7 @@ I have used wheel odometry and IMU data and fused them using the Extended Kalman
 
 
 
-## 🧠 Concepts I learned
+##  Concepts I learned
 
 - How EKF works for sensor fusion
 - Importance of TF (coordinate transformations)
@@ -29,7 +29,7 @@ I have used wheel odometry and IMU data and fused them using the Extended Kalman
 
 
 
-## 🏗️ How to run it 
+##  How to run it 
 
 1. Firstly build a workspace using
 - cd ~/ros2_ws
@@ -45,7 +45,7 @@ I have used wheel odometry and IMU data and fused them using the Extended Kalman
 
 
 
-## 📡 Topics used
+##  Topics used
 
 /odom → odometry data
 /imu → IMU data
