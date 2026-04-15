@@ -41,7 +41,23 @@ def generate_launch_description():
         name='rviz2',
         arguments=['-d', rviz_config],
         output='screen'
-        )   
+        )   ,
+
+        Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
+        output='screen',
+        parameters=[{
+            'robot_description': open(
+                os.path.join(
+                    get_package_share_directory('my_robot_localization'),
+                    'urdf',
+                    'robot.urdf'
+                )
+            ).read()
+        }]
+    )
 
     ])
 
