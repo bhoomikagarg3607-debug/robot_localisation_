@@ -1,0 +1,41 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+
+Visualization Manager:
+  Class: ""
+  Displays:
+
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Name: TF
+
+    - Class: rviz_default_plugins/Odometry
+      Enabled: true
+      Name: EKF Odometry
+      Topic: /odometry/filtered
+      Shape: Arrow
+      Keep: 100
+
+    - Class: rviz_default_plugins/Axes
+      Enabled: true
+      Name: Axes
+      Length: 1.0
+      Radius: 0.1
+
+  Global Options:
+    Fixed Frame: base_link
+
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 10
+      Pitch: 0.5
+      Yaw: 0.5
