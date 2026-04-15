@@ -10,20 +10,23 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', ['launch/ekf_launch.py']),
+        ('share/' + package_name + '/config', ['config/ekf.yaml']),
+        ('share/' + package_name + '/urdf', ['urdf/robot.urdf']),
+        ('share/' + package_name + '/rviz', ['rviz/ekf_config.rviz']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='hoomika_arg',
     maintainer_email='hoomika_arg@todo.todo',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='ROS2 EKF localization package',
+    license='Apache License 2.0',
     extras_require={
         'test': [
             'pytest',
         ],
     },
     entry_points={
-        'console_scripts': [
-        ],
+        'console_scripts': [],
     },
 )

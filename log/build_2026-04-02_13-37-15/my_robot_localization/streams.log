@@ -1,0 +1,20 @@
+[2.459s] Invoking command in '/home/hoomika_arg/ros2_ws/src/my_robot_localization': PYTHONPATH=/home/hoomika_arg/ros2_ws/build/my_robot_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hoomika_arg/ros2_ws/install/my_robot_localization/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_localization build --build-base /home/hoomika_arg/ros2_ws/build/my_robot_localization/build install --record /home/hoomika_arg/ros2_ws/build/my_robot_localization/install.log --single-version-externally-managed install_data
+[2.993s] running egg_info
+[3.016s] writing ../../build/my_robot_localization/my_robot_localization.egg-info/PKG-INFO
+[3.016s] writing dependency_links to ../../build/my_robot_localization/my_robot_localization.egg-info/dependency_links.txt
+[3.017s] writing requirements to ../../build/my_robot_localization/my_robot_localization.egg-info/requires.txt
+[3.018s] writing top-level names to ../../build/my_robot_localization/my_robot_localization.egg-info/top_level.txt
+[3.067s] reading manifest file '../../build/my_robot_localization/my_robot_localization.egg-info/SOURCES.txt'
+[3.070s] writing manifest file '../../build/my_robot_localization/my_robot_localization.egg-info/SOURCES.txt'
+[3.071s] running build
+[3.071s] running build_py
+[3.072s] running install
+[3.083s] running install_lib
+[3.110s] running install_data
+[3.110s] copying launch/ekf_launch.py -> /home/hoomika_arg/ros2_ws/install/my_robot_localization/share/my_robot_localization/launch
+[3.111s] running install_egg_info
+[3.130s] removing '/home/hoomika_arg/ros2_ws/install/my_robot_localization/lib/python3.12/site-packages/my_robot_localization-0.0.0-py3.12.egg-info' (and everything under it)
+[3.131s] Copying ../../build/my_robot_localization/my_robot_localization.egg-info to /home/hoomika_arg/ros2_ws/install/my_robot_localization/lib/python3.12/site-packages/my_robot_localization-0.0.0-py3.12.egg-info
+[3.132s] running install_scripts
+[3.271s] writing list of installed files to '/home/hoomika_arg/ros2_ws/build/my_robot_localization/install.log'
+[3.307s] Invoked command in '/home/hoomika_arg/ros2_ws/src/my_robot_localization' returned '0': PYTHONPATH=/home/hoomika_arg/ros2_ws/build/my_robot_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hoomika_arg/ros2_ws/install/my_robot_localization/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_localization build --build-base /home/hoomika_arg/ros2_ws/build/my_robot_localization/build install --record /home/hoomika_arg/ros2_ws/build/my_robot_localization/install.log --single-version-externally-managed install_data
